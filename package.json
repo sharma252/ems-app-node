@@ -1,0 +1,23 @@
+{
+  "name": "nodeproject1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "commonjs",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "node-fetch": "^2.6.7"
+  },
+  "devDependencies": {
+    "chai": "^4.5.0",
+    "chai-http": "^4.4.0",
+    "mocha": "^8.4.0"
+  }
+}
