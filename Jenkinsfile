@@ -5,7 +5,7 @@ pipeline{
     stage("build"){
       steps {
         echo 'executing npm...'
-        nodejs('Node-22.7.0') {
+        nodejs('NodeJS-22-7-0') {
           sh 'npm install'
         }
       }
@@ -14,7 +14,7 @@ pipeline{
     stage("test"){
       steps {
         echo 'executing test...'
-        nodejs('Node-22.7.0') {
+        nodejs('NodeJS-22-7-0') {
           sh 'npm test'
         }
       }
