@@ -1,7 +1,7 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 // const sinon = require('sinon');
-const app = require('../index.js');
+const {app,server} = require('../index.js');
 const { employees } = require('../src/employees'); // Import your dummy employee array
 
 chai.use(chaiHttp);
@@ -89,6 +89,10 @@ describe('Employee Management System', () => {
                     done();
                 });
         });
+    });
+
+    after((done) => {
+      server.close(done);
     });
 
 });
