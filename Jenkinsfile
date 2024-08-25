@@ -4,19 +4,19 @@ pipeline{
   stages {
     stage("build"){
       steps {
-        echo 'building the app...'
+        echo 'executing npm...'
+        nodejs('Node-22.7.0') {
+          sh 'npm install'
+        }
       }
     }
 
     stage("test"){
       steps {
-        echo 'testing the app...'
-      }
-    }
-
-    stage("deploy"){
-      steps {
-        echo 'deploying the app...'
+        echo 'executing test...'
+        nodejs('Node-22.7.0') {
+          sh 'npm test'
+        }
       }
     }
   }
